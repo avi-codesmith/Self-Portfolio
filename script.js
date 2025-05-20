@@ -3,7 +3,12 @@
 const main = document.querySelector("main");
 const loader = document.querySelector(".loader");
 const random = Math.floor(Math.random() * 5);
-console.log(random);
+const typed = new Typed(".type-writter", {
+  strings: ["Developer", "New Bie", "Programmer", "Student"],
+  typeSpeed: 80,
+  backSpeed: 50,
+  loop: true,
+});
 
 const backgroundChanger = () => {
   main.style.background = `url("images/${random}.jpg")`;

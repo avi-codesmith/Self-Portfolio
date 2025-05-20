@@ -36,8 +36,8 @@ bubbles.forEach((bubble) => {
       y: -window.innerHeight,
       opacity: 0.8,
       scale: 1,
-      duration: 4 + Math.random() * 2, // 4 to 7 sec
-      delay: Math.random() * 3, // 0 to 3 sec delay
+      duration: 4 + Math.random() * 2,
+      delay: 1 + Math.random() * 3,
       repeat: -1,
       ease: "sine.inOut",
     }

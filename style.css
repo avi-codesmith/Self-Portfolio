@@ -22,11 +22,11 @@
 }
 
 main {
-  height: 80vh;
-  width: 80vw;
+  height: 90vh;
+  width: 90vw;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative; /* ✅ MUST HAVE */
+  position: relative;
   border-radius: 4rem;
   position: relative;
   overflow: hidden;
@@ -34,7 +34,6 @@ main {
 
 nav ul {
   background-color: #111;
-  color: #fff;
   border-radius: 0 10rem 10rem 0;
   position: absolute;
   top: 0;
@@ -50,6 +49,51 @@ nav ul {
 nav ul li a {
   font-size: 1.8rem;
   text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+}
+
+.hero {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 6.4rem;
+  color: #fff;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.intro {
+  font-size: 2.4rem;
+  color: orange;
+  font-weight: 500;
+}
+
+.type-writter {
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: orange;
+}
+
+.typed-cursor {
+  font-size: 2.4rem;
+  color: orange;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 
 .footer ul {
@@ -85,4 +129,5 @@ nav ul li a {
   transform: translate(-50%, -50%);
   z-index: 999;
   transition: all 0.3s ease;
+  pointer-events: none;
 }
