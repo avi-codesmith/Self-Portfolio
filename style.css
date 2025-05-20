@@ -27,7 +27,7 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative; /* ✅ MUST HAVE */
-  border-radius: 5rem;
+  border-radius: 4rem;
   position: relative;
   overflow: hidden;
 }
