@@ -21,6 +21,12 @@ gsap.from("main", {
   delay: 1,
 });
 
+gsap.from(".hero", {
+  opacity: 0,
+  duration: 1,
+  delay: 2,
+});
+
 bubbles.forEach((bubble) => {
   const randomX = Math.random() * window.innerWidth;
   bubble.style.left = `${randomX}px`;

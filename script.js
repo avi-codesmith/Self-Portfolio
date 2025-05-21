@@ -22,5 +22,17 @@ const removeLoader = () => {
   }, 1000);
 };
 
+document.addEventListener("click", (e) => {
+  const trail = document.createElement("div");
+  trail.classList.add("trail");
+  document.body.appendChild(trail);
+
+  trail.style.top = `${e.clientY}px`;
+  trail.style.left = `${e.clientX}px`;
+
+  setTimeout(() => {
+    trail.remove();
+  }, 500);
+});
 backgroundChanger();
 removeLoader();
