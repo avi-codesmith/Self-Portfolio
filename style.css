@@ -51,6 +51,7 @@ nav ul li a {
   text-transform: uppercase;
   text-decoration: none;
   color: #fff;
+  cursor: url("pointer.png") 0 0, auto;
 }
 
 .hero {
@@ -113,7 +114,12 @@ nav ul li a {
   color: rgba(255, 255, 255, 0.689);
   font-weight: 900;
   font-size: 1.4rem;
-  cursor: pointer;
+  cursor: url("pointer.png") 0 0, auto;
+  overflow: hidden;
+}
+
+.hero a {
+  height: 0px;
 }
 
 .hero button:hover {

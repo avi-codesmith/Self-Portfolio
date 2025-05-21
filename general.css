@@ -19,15 +19,11 @@ body {
 }
 
 body {
+  cursor: url("cursor.png") 0 0, auto;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
   background-color: #111;
   font-family: "Poppins", sans-serif;
-}
-
-.trail {
-  position: absolute;
-  pointer-events: none;
 }
