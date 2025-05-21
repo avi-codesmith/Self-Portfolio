@@ -6,6 +6,7 @@
   box-sizing: border-box;
   border: none;
   outline: none;
+  user-select: none;
 }
 
 html {
@@ -18,11 +19,15 @@ body {
 }
 
 body {
-  display: grid;
+  display: flex;
   align-items: center;
-  justify-items: center;
+  justify-content: center;
   height: 100vh;
   background-color: #111;
-  margin: 0;
   font-family: "Poppins", sans-serif;
+}
+
+.trail {
+  position: absolute;
+  pointer-events: none;
 }
