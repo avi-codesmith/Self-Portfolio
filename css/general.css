@@ -13,6 +13,14 @@
   display: none;
 }
 
+.locomotive::-webkit-scrollbar {
+  background-color: orange;
+}
+
+[data-scroll-container]::-webkit-scrollbar {
+  background-color: orange;
+}
+
 html {
   font-size: 62.5%;
 }

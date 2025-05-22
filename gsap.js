@@ -1,6 +1,8 @@
 "use strict";
 
-// import LocomotiveScroll from "locomotive-scroll";
+const header = document.querySelector("nav");
+const work = document.querySelector("#work");
+const bubbles = document.querySelectorAll(".bubble");
 
 const scroll = new LocomotiveScroll({
   el: document.querySelector(".locomotive"),
@@ -10,7 +12,28 @@ const scroll = new LocomotiveScroll({
   reloadOnContextChange: true,
 });
 
-const bubbles = document.querySelectorAll(".bubble");
+bubbles.forEach((bubble) => {
+  const randomX = Math.random() * window.innerWidth;
+  bubble.style.left = `${randomX}px`;
+
+  gsap.fromTo(
+    bubble,
+    {
+      y: 0,
+      opacity: 0,
+      scale: 0.2,
+    },
+    {
+      y: -window.innerHeight,
+      opacity: 0.8,
+      scale: 1,
+      duration: 4 + Math.random() * 2,
+      delay: 1 + Math.random() * 3,
+      repeat: -1,
+      ease: "sine.inOut",
+    }
+  );
+});
 
 gsap.from("nav", {
   x: -1000,
@@ -37,25 +60,13 @@ gsap.from(".hero", {
   delay: 2,
 });
 
-bubbles.forEach((bubble) => {
-  const randomX = Math.random() * window.innerWidth;
-  bubble.style.left = `${randomX}px`;
-
-  gsap.fromTo(
-    bubble,
-    {
-      y: 0,
-      opacity: 0,
-      scale: 0.2,
-    },
-    {
-      y: -window.innerHeight,
-      opacity: 0.8,
-      scale: 1,
-      duration: 4 + Math.random() * 2,
-      delay: 1 + Math.random() * 3,
-      repeat: -1,
-      ease: "sine.inOut",
-    }
-  );
+const obs = new IntersectionObserver((entries) => {
+  const entry = entries[0];
+  if (entry.isIntersecting) {
+    header.classList.add("sticky");
+  } // } else {
+  //   header.classList.remove("sticky");
+  // }
 });
+
+obs.observe(work);
