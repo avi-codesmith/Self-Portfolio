@@ -9,9 +9,8 @@
   user-select: none;
 }
 
-.locomotive::-webkit-scrollbar {
-  color: orange;
-  background-color: orange;
+::-webkit-scrollbar {
+  display: none;
 }
 
 html {
@@ -22,6 +21,15 @@ body {
   overflow: hidden;
   cursor: url("../cursor.png") 0 0, auto;
   font-family: "Poppins", sans-serif;
+  background-color: #111;
+}
+
+.locomotive {
+  overflow: hidden;
+}
+
+[data-scroll-container] {
+  min-height: 100vh;
 }
 
 .overflow {
