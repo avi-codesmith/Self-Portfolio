@@ -1,5 +1,15 @@
 "use strict";
 
+// import LocomotiveScroll from "locomotive-scroll";
+
+const scroll = new LocomotiveScroll({
+  el: document.querySelector(".locomotive"),
+  smooth: true,
+  lerp: 0.08,
+  getDirection: true,
+  reloadOnContextChange: true,
+});
+
 const bubbles = document.querySelectorAll(".bubble");
 
 gsap.from("nav", {
