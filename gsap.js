@@ -1,7 +1,6 @@
 "use strict";
 
 const header = document.querySelector("nav");
-const work = document.querySelector("#work");
 const bubbles = document.querySelectorAll(".bubble");
 
 const scroll = new LocomotiveScroll({
@@ -59,14 +58,3 @@ gsap.from(".hero", {
   duration: 1,
   delay: 2,
 });
-
-const obs = new IntersectionObserver((entries) => {
-  const entry = entries[0];
-  if (entry.isIntersecting) {
-    header.classList.add("sticky");
-  } // } else {
-  //   header.classList.remove("sticky");
-  // }
-});
-
-obs.observe(work);

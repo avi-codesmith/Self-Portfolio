@@ -2,6 +2,8 @@
 
 const body = document.querySelector("body");
 const main = document.querySelector("main");
+const workDivs = document.querySelectorAll(".work-container div");
+const work = document.querySelector("#work");
 const loader = document.querySelector(".loader");
 const random = Math.floor(Math.random() * 5);
 const typed = new Typed(".type-writter", {
@@ -30,10 +32,12 @@ const removeLoader = () => {
 };
 
 document.addEventListener("click", (e) => {
+  const color = ["#111", "#444", "#222"];
+  const random = Math.floor(Math.random() * 2);
   const trail = document.createElement("div");
   trail.classList.add("trail");
   document.body.appendChild(trail);
-
+  trail.style.backgroundColor = color[random];
   trail.style.top = `${e.clientY}px`;
   trail.style.left = `${e.clientX}px`;
 
@@ -42,5 +46,19 @@ document.addEventListener("click", (e) => {
   }, 500);
 });
 
+const workObs = new IntersectionObserver((e) => {
+  const ent = e[0];
+  if (ent.isIntersecting) {
+    workDivs.forEach((e) => {
+      e.classList.add("center");
+    });
+  } else {
+    workDivs.forEach((e) => {
+      e.classList.remove("center");
+    });
+  }
+});
+
+workObs.observe(work);
 backgroundChanger();
 removeLoader();
