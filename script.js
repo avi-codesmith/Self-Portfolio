@@ -60,5 +60,6 @@ const workObs = new IntersectionObserver((e) => {
 });
 
 workObs.observe(work);
+
 backgroundChanger();
 removeLoader();

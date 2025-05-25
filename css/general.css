@@ -30,42 +30,21 @@ body {
   cursor: url("../cursor.png") 0 0, auto;
   font-family: "Poppins", sans-serif;
   transition: all 5s ease;
-  animation: bg-color1 40s ease-in-out infinite;
+  animation: bg-color1 20s ease-in-out infinite;
 }
 
 @keyframes bg-color {
   0% {
-    background-color: hsl(0, 0%, 10%);
-  }
-  10% {
-    background-color: hsl(0, 0%, 12%);
-  }
-  20% {
-    background-color: hsl(0, 0%, 14%);
-  }
-  30% {
-    background-color: hsl(0, 0%, 11%);
-  }
-  40% {
     background-color: hsl(0, 0%, 9%);
   }
-  50% {
-    background-color: hsl(0, 0%, 13%);
-  }
-  60% {
-    background-color: hsl(0, 0%, 15%);
-  }
-  70% {
+  10% {
     background-color: hsl(0, 0%, 10%);
   }
-  80% {
-    background-color: hsl(0, 0%, 12%);
-  }
-  90% {
-    background-color: hsl(0, 0%, 14%);
+  20% {
+    background-color: hsl(0, 0%, 6%);
   }
   100% {
-    background-color: hsl(0, 0%, 11%);
+    background-color: hsl(0, 0%, 8%);
   }
 }
 
