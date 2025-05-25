@@ -1,4 +1,4 @@
 # About
 # This is my animated GSAP porfolio code in HTML CSS and with locomotive JS
 # [Live Demo](https://avi-codesmith.netlify.app/)
-![self](https://github.com/user-attachments/assets/85485b70-9162-453e-abc2-72f58e092c55)
+![updatedpage](https://github.com/user-attachments/assets/fcf1918e-1110-4ab2-8d0e-429c58b8e26c)
