@@ -14,14 +14,6 @@
   pointer-events: none;
 }
 
-.black {
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.474);
-  position: absolute;
-  pointer-events: none;
-}
-
 .container {
   height: 100vh;
   display: flex;
@@ -34,6 +26,7 @@ main {
   width: 90%;
   background-repeat: no-repeat;
   background-size: cover;
+  background: linear-gradient(#33333391, #11111191);
   position: relative;
   overflow: hidden;
   border-radius: 0 4rem 0 4rem;

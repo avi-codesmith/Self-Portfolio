@@ -17,7 +17,7 @@ window.history.scrollRestoration = "manual";
 window.scrollTo(0, 0);
 
 const backgroundChanger = () => {
-  main.style.background = `url("images/${random}.jpg")`;
+  main.style.background = `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url("images/${random}.jpg")`;
   main.style.backgroundRepeat = "no-repeat";
   main.style.backgroundSize = "cover";
 };
@@ -32,8 +32,12 @@ const removeLoader = () => {
 };
 
 document.addEventListener("click", (e) => {
-  const color = ["#111", "#444", "#222"];
-  const random = Math.floor(Math.random() * 2);
+  const color = [
+    "rgba(17, 17, 17, 0.5)",
+    "rgba(2, 2, 2, 0.5)",
+    "rgba(20, 20, 20, 0.5)",
+  ];
+  const random = Math.floor(Math.random() * color.length);
   const trail = document.createElement("div");
   trail.classList.add("trail");
   document.body.appendChild(trail);
