@@ -3,13 +3,13 @@
 const header = document.querySelector("nav");
 const bubbles = document.querySelectorAll(".bubble");
 
-const scroll = new LocomotiveScroll({
-  el: document.querySelector(".locomotive"),
-  smooth: true,
-  lerp: 0.08,
-  getDirection: true,
-  reloadOnContextChange: true,
-});
+// const scroll = new LocomotiveScroll({
+//   el: document.querySelector(".locomotive"),
+//   smooth: true,
+//   lerp: 0.08,
+//   getDirection: true,
+//   reloadOnContextChange: true,
+// });
 
 bubbles.forEach((bubble) => {
   const randomX = Math.random() * window.innerWidth;
