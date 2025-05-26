@@ -270,7 +270,7 @@ nav ul li a:focus .underline {
     background-color: hsl(0, 0%, 7%);
   }
   10% {
-    background-color: hsl(0, 0%, 10%);
+    background-color: hsl(0, 0%, 5%);
   }
   20% {
     background-color: hsl(0, 0%, 10%);
@@ -367,11 +367,11 @@ nav ul li a:focus .underline {
   position: relative;
 }
 
-#project:hover .scroll-left {
+.row:hover .scroll-left {
   animation-play-state: paused;
 }
 
-#project:hover .scroll-right {
+.row:hover .scroll-right {
   animation-play-state: paused;
 }
 
@@ -384,17 +384,19 @@ nav ul li a:focus .underline {
   top: 13%;
   right: 0;
   z-index: 9;
+  pointer-events: none;
 }
 
 #project::before {
   content: "";
   height: 52vh;
-  width: 40rem;
+  width: 20vw;
   background: linear-gradient(to left, transparent, #111111be);
   position: absolute;
   top: 13%;
   left: 0;
   z-index: 9;
+  pointer-events: none;
 }
 
 .scroll-wrapper {
