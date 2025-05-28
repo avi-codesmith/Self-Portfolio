@@ -63,7 +63,17 @@ const workObs = new IntersectionObserver((e) => {
   }
 });
 
-workObs.observe(work);
+// const navObs = new IntersectionObserver((e) => {
+//   const ent = e[0];
 
+//   if (ent.isIntersecting === true) {
+//     console.log(ent);
+//     header.style.position = "sticky";
+//     header.style.top = "0";
+//   }
+// });
+
+// navObs.observe(work);
+workObs.observe(work);
 backgroundChanger();
 removeLoader();
